@@ -1,0 +1,19 @@
+* {
+    
+    color: #d5d3c2;
+}
+html {
+    font-size: 62.5%;
+}
+
+.fat {
+    font-family: system-ui, sans-serif;
+}
+.code {
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+    font-weight: 400;
+}
+.industrial {
+    font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
+    font-weight: 900;
+}

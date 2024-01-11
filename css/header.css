@@ -1,0 +1,23 @@
+header {
+    h1 {
+        font-size: 14vw;
+        letter-spacing: -1vw;
+    }
+    p.definition {
+        font-size: clamp(2rem, 2vw, 3.6rem);
+        /* text-align: center; */
+        margin-left: clamp(2rem, 2vw, 3.6rem);
+    }
+
+    ul.technos {
+        font-size: clamp(2rem, 2vw, 3.6rem);
+        margin-top: 50px;
+        margin-left: 50vw;
+
+        li {
+            font-weight: 700;
+            margin-block: 5px;
+        }
+    }
+}
+

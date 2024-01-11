@@ -1,0 +1,31 @@
+:root {
+    --blue: #5e909c;
+    --green: #223622;
+    --cream: #d5d3c2;
+}
+
+html {
+    font-size: 64.5%;
+    background-color: var(--blue);
+    padding: clamp(5px, 1vw, 20px);
+    overflow-x: hidden;
+}
+
+.mainWidth {
+    width: min(1200px, 100%);
+    padding: clamp(1rem, 1.5vw + 0.1rem, 3rem);
+    margin-inline: auto;
+}
+
+section.technos {
+    display: flex;
+    justify-content: center;
+
+    .wideBox {
+        width: max(1920px, 100%);
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
