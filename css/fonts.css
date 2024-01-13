@@ -9,11 +9,38 @@ html {
 .fat {
     font-family: system-ui, sans-serif;
 }
-.code {
-    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
-    font-weight: 400;
-}
+
 .industrial {
     font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif;
-    font-weight: 900;
+}
+.systemUI {
+    font-family: system-ui, sans-serif;
+}
+
+h1 {
+    font-family: system-ui, sans-serif;
+}
+
+.p1,.p2,.p3,.p4,.p5,.p6 {
+    font-family: system-ui, sans-serif;
+    letter-spacing: -0.1vw;
+}
+
+.p1 {
+    font-size: 2.4rem;
+}
+.p2 {
+    font-size: 2.2rem;
+}
+.p3 {
+    font-size: 2rem;
+}
+.p4 {
+    font-size: 1.8rem;;
+}
+.p5 {
+    font-size: 1.6rem;;
+}
+.p6 {
+    font-size: 1.4rem;;
 }

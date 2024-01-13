@@ -1,0 +1,53 @@
+.mainNav {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    .card {
+        border-left: 20px solid var(--cream);
+        transition: 300ms ease-out;
+
+        .text {
+            font-size: clamp(2rem, 2vw, 3.6rem);
+            font-weight: 300;
+            font-family: system-ui, sans-serif;
+            letter-spacing: -0.1vw;
+            line-height: 0.8em;
+            padding-left: 8px;
+            transition: 300ms ease-out;
+        }
+
+        svg {
+            width: 150px;
+        }
+    }
+
+    
+}
+
+div.links {
+    right: var(--html-padding);
+    bottom: 0;
+
+
+}
+
+@media (max-width: 768px) {
+    div.links a {
+        height: 32px;
+    }
+
+}
+@media screen and (hover:hover) {
+    .mainNav .card:hover {
+        border-left: 40px solid var(--cream);
+        transition: 300ms ease-out;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+
+        .text {
+            font-weight: 500;
+            transition: 300ms ease-out;
+        }
+    }
+}

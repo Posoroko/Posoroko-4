@@ -45,6 +45,8 @@
 .grow3 {flex-grow: 3;}
 .grow4 {flex-grow: 4;}
 
+.noShrink {flex-shrink: 0;}
+
 .gap5 {gap: 5px;}
 .gap10 {gap: 10px;}
 .gap15 {gap: 15px;}

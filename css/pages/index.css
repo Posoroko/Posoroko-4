@@ -1,0 +1,61 @@
+body.index {
+    h1 {
+        font-size: max(10vw, 4rem);
+        letter-spacing: -1vw;
+            font-weight: 700;
+        /* text-align: center; */
+    }
+    .boxA {
+        width: 10vw;
+        background-color: var(--cream);
+    }
+
+    .definition p {
+        font-size: clamp(2rem, 2vw, 3.6rem);
+        font-family: system-ui, sans-serif;
+        letter-spacing: -0.1vw;
+        margin-left: clamp(1.0rem, 2vw, 3rem);
+    }
+
+    @media (max-width: 768px) {
+        .definitionBox {
+            margin-top: 15px;
+        }
+
+    }
+
+    ul.technos {
+        font-size: clamp(2rem, 2vw, 3.6rem);
+        margin-top: 50px;
+        margin-left: 50vw;
+
+        li {
+            font-weight: 700;
+            margin-block: 5px;
+        }
+    }
+
+    
+
+
+    
+}
+
+.projImg {
+    height: 400px;
+    width: 200px;
+    object-fit: cover;
+}
+.portrait {
+    width: 400px;border-radius: 50%;
+}
+.halfTone {
+    mix-blend-mode:soft-light
+}
+path {
+    fill: var(--cream);
+}
+
+header {
+    width: 100%;
+}

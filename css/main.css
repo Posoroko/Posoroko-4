@@ -8,6 +8,13 @@
     box-sizing: border-box;
     line-height: 1;
 }
+a, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
 li {
     list-style: none;
+}
+button {
+    all: unset;
 }
