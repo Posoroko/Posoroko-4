@@ -8,6 +8,8 @@
 
 html {
     height: 100vh;
+    height: 100svh;
+    height: 100dvh;
     font-size: 64.5%;
     background-color: var(--blue);
     padding: var(--html-padding);
