@@ -3,98 +3,97 @@
     justify-content: space-between;
     align-items: flex-end;
     padding-bottom: 10px;
-    .card {
-        border-left: 20px solid var(--cream);
-        transition: 300ms ease-out;
+}
 
-        .text {
-            font-size: clamp(2.8rem, 3.5vw, 5rem);
-            font-weight: 300;
-            font-family: system-ui, sans-serif;
-            letter-spacing: -0.2vw;
-            line-height: 0.8em;
-            padding-left: 8px;
-            transition: 300ms ease-out;
-        }
+.mainNav .card {
+    border-left: 20px solid var(--cream);
+    transition: 300ms ease-out;
+}
 
-        svg {
-            width: 150px;
-        }
-    }
+.mainNav .card .text {
+    font-size: clamp(2.8rem, 3.5vw, 5rem);
+    font-weight: 600;
+    font-family: system-ui, sans-serif;
+    letter-spacing: -0.2vw;
+    line-height: 0.8em;
+    padding-left: 8px;
+    transition: 300ms ease-out;
+}
 
-    
+.mainNav .card svg {
+    width: 150px;
 }
 
 div.links {
     right: var(--html-padding);
     bottom: 0;
-
-
 }
 
 @media (max-width: 768px) {
     div.links a {
         height: 32px;
     }
-
 }
+
 @media screen and (hover:hover) {
     .mainNav .card:hover {
         border-left: 40px solid var(--cream);
         transition: 300ms ease-out;
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
+    }
 
-        .text {
-            font-weight: 500;
-            transition: 300ms ease-out;
-        }
+    .mainNav .card:hover .text {
+        letter-spacing: -0.1vw;
+        transition: 300ms ease-out;
     }
 }
 
 /* INDEX */
 
-#language_selector:checked
-    + label
-    + header.index
+#language_selector:checked 
+    + label 
+    + header.index 
     + .mainNav div .card span .fr,
-#language_selector
-    + label
-    + header.index
+#language_selector 
+    + label 
+    + header.index 
     + .mainNav div .card span .en {
         opacity: 0;
         transition: 300ms ease;
 }
-#language_selector:checked
-    + label
-    + header.index
+
+#language_selector:checked 
+    + label 
+    + header.index 
     + .mainNav div .card span .en {
-    opacity: 1;
-    transition: 300ms ease;
+        opacity: 1;
+        transition: 300ms ease;
 }
 
 /* WORK */
 
-#language_selector:checked
-    + label
-    + header
-    + main.work
+#language_selector:checked 
+    + label 
+    + header 
+    + main.work 
     + .mainNav div .card span .fr,
-#language_selector
-    + label
-    + header
-    + main.work
+#language_selector 
+    + label 
+    + header 
+    + main.work 
     + .mainNav div .card span .en {
-    opacity: 0;
-    transition: 300ms ease;
+        opacity: 0;
+        transition: 300ms ease;
 }
-#language_selector:checked
-    + label
-    + header
-    + main.work
+
+#language_selector:checked 
+    + label 
+    + header 
+    + main.work 
     + .mainNav div .card span .en {
-    opacity: 1;
-    transition: 300ms ease;
+        opacity: 1;
+        transition: 300ms ease;
 }
 
 /* about */
@@ -103,24 +102,24 @@ div.links {
     margin-top: 30px;
 }
 
-#language_selector:checked
-    + label
-    + header
-    + main.about
+#language_selector:checked 
+    + label 
+    + header 
+    + main.about 
     + .mainNav div .card span .fr,
-#language_selector
-    + label
-    + header
-    + main.about
+#language_selector 
+    + label 
+    + header 
+    + main.about 
     + .mainNav div .card span .en {
         opacity: 0;
         transition: 300ms ease;
 }
 
-#language_selector:checked
-    + label
-    + header
-    + main.about
+#language_selector:checked 
+    + label 
+    + header 
+    + main.about 
     + .mainNav div .card span .en {
         opacity: 1;
         transition: 300ms ease;
