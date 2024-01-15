@@ -4,7 +4,6 @@ input[type=checkbox] {
     display: none;
 }
 .language_selector {
-    background-color: var(--blue);
     position: absolute;
     top: 0;
     right: 0;

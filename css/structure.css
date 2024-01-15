@@ -11,8 +11,10 @@ html {
     height: 100svh;
     height: 100dvh;
     font-size: 64.5%;
-    background-color: var(--blue);
-    padding: var(--html-padding);
+    
+
+
+    
 }
 
 .mainWidth {
@@ -23,7 +25,24 @@ html {
 
 body {
     height: 100%;
+    background-color: var(--blue);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    padding: var(--html-padding);
+}
+.background {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+
+    background-color: var(--blue);
+    /* background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
+    background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
+    opacity: 1;
+    filter: blur(1px);
 }

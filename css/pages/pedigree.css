@@ -209,6 +209,7 @@ article.content .title {
 .introCard {
     background-color: transparent;
     border: 2px solid var(--cream);
+    backdrop-filter: blur(1.5px);
 }
 
 .introCard h2.title,
