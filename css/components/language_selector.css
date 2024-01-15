@@ -1,0 +1,63 @@
+
+
+input[type=checkbox] {
+    display: none;
+}
+.language_selector {
+    background-color: var(--blue);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.language_selector {
+    height: 40px;
+    padding: 0 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.language_selector span {
+    color: var(--cream);
+    font-size: 16px;
+    font-family: system-ui, sans-serif;
+}
+
+.language_slider {
+    width: 40px;
+    background-color: var(--cream);
+    padding: 3px;
+    border-radius: 50px;
+    display: flex;
+}
+
+.language_slider .language_thumb {
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: var(--blue);
+    transition: background-color 600ms ease;
+}
+.language_slider .language_thumb:active {
+    width: 50%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    background-color: rgb(187, 232, 253);
+
+}
+
+/* ANIMATION */
+
+#language_selector + .language_selector .language_slider .language_thumb {
+    /* animation */
+    translate: 0%;
+    transition: 300ms ease;
+}
+
+#language_selector:checked+.language_selector .language_slider .language_thumb {
+    /* animation */
+    translate: 100%;
+    transition: 300ms ease;
+}

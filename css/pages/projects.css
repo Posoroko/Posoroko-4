@@ -1,21 +1,10 @@
-body.projects {
-    h1 {
-        font-size: max(10vw, 4rem);
-        letter-spacing: -1vw;
-        font-weight: 700;
-        
-        .separator {
-            font-weight: 400;
-            margin-inline: 2vw;
-        }
-    }
-}
-div.projects::-webkit-scrollbar {
+
+main.projects::-webkit-scrollbar {
     display: none;
     /* For Chrome, Safari and Opera */
 }
 
-div.projects {
+main.projects {
     --easing: cubic-bezier(.63, 0, .34, 1);
     --ease-quick: cubic-bezier(.74, -0.01, .5, 1);
     --ease-delay: cubic-bezier(.84, -0.01, .31, .99);
@@ -103,18 +92,18 @@ div.projects {
 }   
 
 /* This is the scrollbar track */
-div.projects::-webkit-scrollbar {
+main.projects::-webkit-scrollbar {
     width: 10px;
     background: #5e909c;
 }
 
 /* This is the handle (or "thumb") of the scrollbar */
-div.projects::-webkit-scrollbar-thumb {
+main.projects::-webkit-scrollbar-thumb {
 
     background: #d5d3c268;
     border-radius: 10px;
 }
 /* Change the scrollbar thumb color on hover */
-div.projects::-webkit-scrollbar-thumb:hover {
+main.projects::-webkit-scrollbar-thumb:hover {
     background: #d5d3c286;
 }

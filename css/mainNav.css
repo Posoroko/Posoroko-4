@@ -8,10 +8,10 @@
         transition: 300ms ease-out;
 
         .text {
-            font-size: clamp(2rem, 2vw, 3.6rem);
+            font-size: clamp(2.8rem, 3.5vw, 5rem);
             font-weight: 300;
             font-family: system-ui, sans-serif;
-            letter-spacing: -0.1vw;
+            letter-spacing: -0.2vw;
             line-height: 0.8em;
             padding-left: 8px;
             transition: 300ms ease-out;
@@ -50,4 +50,78 @@ div.links {
             transition: 300ms ease-out;
         }
     }
+}
+
+/* INDEX */
+
+#language_selector:checked
+    + label
+    + header.index
+    + .mainNav div .card span .fr,
+#language_selector
+    + label
+    + header.index
+    + .mainNav div .card span .en {
+        opacity: 0;
+        transition: 300ms ease;
+}
+#language_selector:checked
+    + label
+    + header.index
+    + .mainNav div .card span .en {
+    opacity: 1;
+    transition: 300ms ease;
+}
+
+/* WORK */
+
+#language_selector:checked
+    + label
+    + header
+    + main.work
+    + .mainNav div .card span .fr,
+#language_selector
+    + label
+    + header
+    + main.work
+    + .mainNav div .card span .en {
+    opacity: 0;
+    transition: 300ms ease;
+}
+#language_selector:checked
+    + label
+    + header
+    + main.work
+    + .mainNav div .card span .en {
+    opacity: 1;
+    transition: 300ms ease;
+}
+
+/* about */
+
+.mainNav.about {
+    margin-top: 30px;
+}
+
+#language_selector:checked
+    + label
+    + header
+    + main.about
+    + .mainNav div .card span .fr,
+#language_selector
+    + label
+    + header
+    + main.about
+    + .mainNav div .card span .en {
+        opacity: 0;
+        transition: 300ms ease;
+}
+
+#language_selector:checked
+    + label
+    + header
+    + main.about
+    + .mainNav div .card span .en {
+        opacity: 1;
+        transition: 300ms ease;
 }

@@ -1,10 +1,5 @@
 body.index {
-    h1 {
-        font-size: max(10vw, 4rem);
-        letter-spacing: -1vw;
-            font-weight: 700;
-        /* text-align: center; */
-    }
+    
     .boxA {
         width: 10vw;
         background-color: var(--cream);
@@ -34,11 +29,6 @@ body.index {
             margin-block: 5px;
         }
     }
-
-    
-
-
-    
 }
 
 .projImg {
@@ -56,6 +46,3 @@ path {
     fill: var(--cream);
 }
 
-header {
-    width: 100%;
-}

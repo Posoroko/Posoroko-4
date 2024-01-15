@@ -1,0 +1,113 @@
+header {
+    width: 100%;
+}
+
+h1 {
+    font-family: system-ui, sans-serif;
+    font-size: clamp(2.8rem, 7vw, 50rem);
+    letter-spacing: -0.6vw;
+    font-weight: 700;
+    /* text-align: center; */
+}
+
+/* INDEX */ 
+
+#language_selector:checked
+    + label.language_selector
+    + header.index div .definitionBox .definition .swappable.fr,
+#language_selector
+    + label.language_selector
+    + header.index div .definitionBox .definition .swappable.en {
+    opacity: 0;
+    transition: 300ms ease;
+}
+#language_selector:checked
+    + label.language_selector
+    + header.index div .definitionBox .definition .swappable.en {
+    opacity: 1;
+    transition: 300ms ease;
+}
+
+/* WORK */
+
+header.work {
+    h1 {
+        font-size: max(10vw, 4rem);
+        letter-spacing: -1vw;
+        font-weight: 700;
+
+        .separator {
+            font-weight: 400;
+            margin-inline: 2vw;
+        }
+    }
+}
+
+#language_selector:checked
+    + label.language_selector
+    + header.work h1 .fr {
+        opacity: 0;
+        transition: 300ms ease;
+}
+
+#language_selector
+    + label.language_selector
+    + header.work h1 .fr {
+        opacity: 1;
+        transition: 300ms ease;
+}
+
+#language_selector
+    + label.language_selector
+    + header.work h1 .en {
+    opacity: 0;
+    transition: 300ms ease;
+}
+
+#language_selector:checked
+    + label.language_selector
+    + header.work h1 .en {
+        opacity: 1;
+        transition: 300ms ease;
+}
+
+/* ABOUT */
+
+header.about h1 {
+    font-size: max(10vw, 4rem);
+    letter-spacing: -1vw;
+    font-weight: 700;
+    padding-bottom: 3vw;
+
+    .separator {
+        font-weight: 400;
+        margin-inline: 2vw;
+    }
+}
+
+#language_selector:checked
+    + label.language_selector
+    + header.about h1 .fr {
+        opacity: 0;
+        transition: 300ms ease;
+}
+#language_selector
+    + label.language_selector
+    + header.about h1 .fr {
+        opacity: 1;
+        transition: 300ms ease;
+}
+
+#language_selector
+    + label.language_selector
+    + header.about h1 .en {
+        opacity: 0;
+        transition: 300ms ease;
+}
+
+#language_selector:checked
+    + label.language_selector
+    + header.about h1 .en {
+        opacity: 1;
+        transition: 300ms ease;
+}

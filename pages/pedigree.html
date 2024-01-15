@@ -9,23 +9,45 @@
     <link rel="stylesheet" href="../css/utility.css">
     <link rel="stylesheet" href="../css/pages/pedigree.css">
     <link rel="stylesheet" href="../css/mainNav.css">
+    <link rel="stylesheet" href="../css/components/language_selector.css">
+    <link rel="stylesheet" href="../css/components/header.css">
     <title>Pedigree</title>
 </head>
 <body class="pedigree">
-    <h1>Pedigree</h1>
+    <input id="language_selector" class="language_selector" type="checkbox">
+    
+    <label for="language_selector" class="language_selector">
+        <span class="lang">fr</span>
+    
+        <span class="language_slider">
+            <span class="language_thumb"></span>
+        </span>
+    
+        <span class="lang">en</span>
+    </label>
 
-    <main class="pedigree grow">
+    <header class="about flex justifyBetween alignCenter">
+        <h1 class="relative industrial">
+            <span class=" fr">A propos</span>
+            <span class="en absolute full left0 top0">About</span>
+        </h1>
+    </header>
+
+    <main class="about pedigree grow">
 
         <div class="relative flex h100">
             
-            <input id="stack_radio" name="tab"  type="radio">
-            <label for="stack_radio" class="p1" tabindex="0">My stack</label>
+            <input id="stack_radio" name="tab"  type="radio" checked>
+            <label for="stack_radio" class="mainTab p1" tabindex="0">
+                <span class="fr">Pile techno</span>
+                <span class="absolute top0 left0 full en">Techno stack</span>
+            </label>
             
             <div id="stack_content" class="tabContent flex">
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>CSS</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>CSS</span>
+                    </p>
 
                     <svg viewBox="0 0 512 512">
                         <path d="M483.111,0.501l-42.59,461.314l-184.524,49.684L71.47,461.815L28.889,0.501H483.111z M397.29,94.302
@@ -37,9 +59,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>HTML</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>HTML</span>
+                    </p>
                 
                     <svg viewBox="0 0 512 512">
                         <path
@@ -52,9 +74,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Javascript</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Javascript</span>
+                    </p>
                 
                     <svg viewBox="0 0 32 32" version="1.1">
                         <path
@@ -64,9 +86,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Vue.js</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Vue.js</span>
+                    </p>
                 
                     <svg viewBox="0 0 14 14">
                         <path d="m 10.5985,1.80525 0.0015,-0.003 -2.2125,0 -1.3875,2.399 0,0.001 -1.386,-2.4 -2.2125,0 0,0.0025 -2.4015,0 6,10.393 6,-10.3925" />
@@ -74,9 +96,19 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Nuxt</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Napoletana</span>
+                    </p>
+                
+                    <svg viewBox="0 0 19 19">
+                        <path d="M16.417 9.579A7.917 7.917 0 1 1 8.5 1.662a7.917 7.917 0 0 1 7.917 7.917zm-4.165-4.6a10.965 10.965 0 0 0-7.662-.004.396.396 0 1 0 .275.742 10.173 10.173 0 0 1 7.11.003.396.396 0 1 0 .277-.741zm-.435 1.48s-.23-.09-.498-.175a9.597 9.597 0 0 0-5.697-.034c-.3.09-.596.205-.596.205a.308.308 0 0 0-.175.407l3.444 8.327c.067.16.175.16.242 0l3.453-8.323a.31.31 0 0 0-.173-.408zM6.875 8.662a1.026 1.026 0 1 0-1.026-1.026 1.026 1.026 0 0 0 1.026 1.026zm1.546 3.852a1.026 1.026 0 1 0-1.026-1.025 1.026 1.026 0 0 0 1.026 1.025zm1.16-2.747a1.026 1.026 0 1 0-1.026-1.026A1.026 1.026 0 0 0 9.58 9.768z" />
+                    </svg>
+                </div>
+
+                <div class="stackCard">
+                    <p class="title grow relative">
+                        <span>Nuxt</span>
+                    </p>
                 
                     <svg viewBox="0 0 32 32">
                         <path d="M26.297 27.031l0.031-0.063c0.031-0.047 0.052-0.099 0.073-0.156v-0.005c0.099-0.26 0.12-0.536 0.073-0.813v0.010c-0.052-0.292-0.156-0.573-0.313-0.828l0.010 0.010-7.094-12.474-1.083-1.891-8.156 14.365c-0.141 0.25-0.229 0.521-0.276 0.802v0.016c-0.057 0.323-0.021 0.651 0.109 0.953l-0.005-0.010c0.016 0.047 0.042 0.089 0.068 0.135l-0.005-0.005c0.214 0.365 0.667 0.802 1.667 0.802h13.198c0.208 0 1.234-0.042 1.708-0.849zM17.995 14.609l6.479 11.396h-12.953zM31.661 25.188l-9.354-16.479c-0.099-0.177-0.635-1.052-1.578-1.052-0.422 0-1.026 0.182-1.521 1.047l-1.208 2.12 1.073 1.896 1.667-2.953 9.255 16.245h-3.521c0.047 0.271 0.021 0.547-0.073 0.807v-0.010c-0.021 0.057-0.042 0.115-0.073 0.167v-0.005l-0.031 0.063c-0.474 0.807-1.495 0.849-1.693 0.849h5.505c0.203 0 1.219-0.042 1.693-0.849 0.214-0.37 0.359-0.984-0.141-1.844zM9.74 27.078c-0.021-0.042-0.042-0.083-0.063-0.125v-0.005c-0.13-0.302-0.172-0.63-0.115-0.953v0.010h-7.563l11.24-19.776 3.687 6.484 1.073-1.891-3.219-5.667c-0.089-0.161-0.63-1.036-1.568-1.036-0.422 0-1.031 0.182-1.521 1.052l-11.385 20.016c-0.099 0.172-0.568 1.078-0.099 1.885 0.214 0.37 0.667 0.802 1.667 0.802h9.531c-0.99 0-1.453-0.427-1.667-0.802z" />
@@ -84,9 +116,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Cypress</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Cypress</span>
+                    </p>
                 
                     <svg viewBox="0 0 24 24">
                         <path d="M11.998 0C5.366 0 0 5.367 0 12a11.992 11.992 0 0 0 12 12c6.633 0 12-5.367 12-12-.001-6.633-5.412-12-12.002-12zM6.37 14.575c.392.523.916.742 1.657.742.35 0 .699-.044 1.004-.175.306-.13.655-.306 1.09-.567l1.223 1.745c-1.003.83-2.138 1.222-3.447 1.222-1.048 0-1.92-.218-2.705-.654a4.393 4.393 0 0 1-1.746-1.92c-.392-.83-.611-1.79-.611-2.925 0-1.09.219-2.094.61-2.923a4.623 4.623 0 0 1 1.748-2.007c.741-.48 1.657-.698 2.661-.698.699 0 1.353.087 1.877.305a5.64 5.64 0 0 1 1.614.96l-1.222 1.658A4.786 4.786 0 0 0 9.12 8.77c-.305-.13-.698-.174-1.048-.174-1.483 0-2.225 1.134-2.225 3.446-.043 1.18.175 2.008.524 2.532H6.37zm12 2.705c-.436 1.353-1.091 2.357-2.008 3.098-.916.743-2.138 1.135-3.665 1.266l-.305-2.05c1.003-.132 1.745-.35 2.225-.7.174-.13.524-.523.524-.523L11.519 6.764h3.01l2.095 8.683 2.226-8.683h2.923L18.37 17.28z" />
@@ -94,9 +126,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Directus</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Directus</span>
+                    </p>
                 
                     <svg viewBox="0 0 24 24">
                         <path d="M19.187 13.909a1.74 1.74 0 0 1-.286-.092.657.657 0 0 1-.203-.139c.056-.488 0-.912.047-1.392.184-1.862 1.355-1.272 2.406-1.577.655-.184 1.31-.562 1.475-1.336a13.528 13.528 0 0 0-2.397-2.204c-2.85-2.028-6.574-2.84-9.958-2.277a5.113 5.113 0 0 0 2.238 2.074s-.917 0-1.703-.587c-.23.092-.692.274-.913.384a5.094 5.094 0 0 0 6.63.37c-.01.017-.185.285-.397 1.4-.47 2.38-1.826 2.195-3.504 1.596-3.485-1.264-5.403-.093-7.145-2.49-.507.286-.82.82-.82 1.402 0 .599.331 1.106.81 1.383.262-.348.38-.446.836-.446-.706.4-.79.75-1.094 1.718-.368 1.171-.212 2.37-1.936 2.683-.913.046-.894.664-1.226 1.586-.415 1.199-.968 1.678-2.047 2.812.443.535.904.6 1.374.406.968-.406 1.715-1.66 2.415-2.471.784-.904 2.665-.517 4.085-1.402.977-.599 1.457-1.41.811-2.784a2.72 2.72 0 0 1 .701 1.66c1.641-.213 3.836 1.788 5.836 2.12a3.574 3.574 0 0 1-.488-.82c-.23-.554-.304-1.06-.258-1.503.184 1.097 1.29 2.507 3.07 2.637.452.036.95-.019 1.466-.176.618-.184 1.19-.424 1.872-.295.507.093.977.35 1.272.784.443.645 1.41.784 1.844-.009-.977-2.554-3.67-2.72-4.813-3.015z" />
@@ -104,9 +136,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Github</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Github</span>
+                    </p>
                 
                     <svg viewBox="0 0 16 16">
                         <path d="M8 1C4.133 1 1 4.13 1 7.993c0 3.09 2.006 5.71 4.787 6.635.35.064.478-.152.478-.337 0-.166-.006-.606-.01-1.19-1.947.423-2.357-.937-2.357-.937-.319-.808-.778-1.023-.778-1.023-.635-.434.048-.425.048-.425.703.05 1.073.72 1.073.72.624 1.07 1.638.76 2.037.582.063-.452.244-.76.444-.935-1.554-.176-3.188-.776-3.188-3.456 0-.763.273-1.388.72-1.876-.072-.177-.312-.888.07-1.85 0 0 .586-.189 1.924.716A6.711 6.711 0 018 4.381c.595.003 1.194.08 1.753.236 1.336-.905 1.923-.717 1.923-.717.382.963.142 1.674.07 1.85.448.49.72 1.114.72 1.877 0 2.686-1.638 3.278-3.197 3.45.251.216.475.643.475 1.296 0 .934-.009 1.688-.009 1.918 0 .187.127.404.482.336A6.996 6.996 0 0015 7.993 6.997 6.997 0 008 1z" />
@@ -114,9 +146,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Git</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Git</span>
+                    </p>
                 
                     <svg viewBox="0 0 48 48" class="git">
                         <path class="cream" d="M4.21,22.12a2.87,2.87,0,0,0,0,3.77L22.12,43.8a2.87,2.87,0,0,0,3.77,0l17.9-17.91a2.85,2.85,0,0,0,0-3.77L25.89,4.21A2.68,2.68,0,0,0,24,3.51h0a2.66,2.66,0,0,0-1.88.71Z" />
@@ -130,9 +162,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Photoshop</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Photoshop</span>
+                    </p>
                 
                     <svg viewBox="0 0 512 512">
                         <path d="M426.333,0.5H85.667C38.825,0.5,0.5,38.825,0.5,85.667v340.667c0,46.842,38.325,85.167,85.167,85.167
@@ -150,9 +182,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Illustrator</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Illustrator</span>
+                    </p>
                 
                     <svg viewBox="0 0 512 512">
                         <path display="inline"
@@ -166,9 +198,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Node.js</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Node.js</span>
+                    </p>
                 
                     <svg viewBox="0 0 24 24">
                         <path d="M12 23.9555C11.6584 23.9555 11.3395 23.8674 11.0435 23.7134L8.01449 21.9748C7.55901 21.7327 7.78675 21.6447 7.9234 21.6006C8.5383 21.4026 8.65217 21.3586 9.28986 21.0064C9.35818 20.9624 9.44928 20.9844 9.5176 21.0284L11.8406 22.3709C11.9317 22.4149 12.0455 22.4149 12.1139 22.3709L21.2008 17.2871C21.2919 17.2431 21.3375 17.1551 21.3375 17.045V6.89944C21.3375 6.7894 21.2919 6.70137 21.2008 6.65735L12.1139 1.59556C12.0228 1.55155 11.9089 1.55155 11.8406 1.59556L2.75362 6.65735C2.66253 6.70137 2.61698 6.81141 2.61698 6.89944V17.045C2.61698 17.1331 2.66253 17.2431 2.75362 17.2871L5.23602 18.6736C6.57971 19.3338 7.42236 18.5636 7.42236 17.7933V7.77975C7.42236 7.6477 7.53623 7.51566 7.69565 7.51566H8.85714C8.99379 7.51566 9.13043 7.6257 9.13043 7.77975V17.7933C9.13043 19.5319 8.15114 20.5443 6.44306 20.5443C5.91925 20.5443 5.50932 20.5443 4.34783 19.9941L1.95652 18.6736C1.36439 18.3435 1 17.7273 1 17.067V6.92145C1 6.26121 1.36439 5.645 1.95652 5.31488L11.0435 0.231082C11.6128 -0.0770272 12.3872 -0.0770272 12.9565 0.231082L22.0435 5.31488C22.6356 5.645 23 6.26121 23 6.92145V17.067C23 17.7273 22.6356 18.3435 22.0435 18.6736L12.9565 23.7574C12.6605 23.8894 12.3188 23.9555 12 23.9555ZM14.8012 16.979C10.8157 16.979 9.99586 15.2184 9.99586 13.7219C9.99586 13.5898 10.1097 13.4578 10.2692 13.4578H11.4534C11.5901 13.4578 11.7039 13.5458 11.7039 13.6778C11.8861 14.8442 12.4099 15.4165 14.824 15.4165C16.7371 15.4165 17.5569 14.9983 17.5569 14.008C17.5569 13.4358 17.3292 13.0176 14.3458 12.7315C11.8634 12.4894 10.3147 11.9612 10.3147 10.0466C10.3147 8.26392 11.8634 7.20755 14.4596 7.20755C17.3747 7.20755 18.8095 8.17589 18.9917 10.2886C18.9917 10.3547 18.9689 10.4207 18.9234 10.4867C18.8778 10.5307 18.8095 10.5747 18.7412 10.5747H17.5569C17.4431 10.5747 17.3292 10.4867 17.3064 10.3767C17.0331 9.16624 16.3271 8.7701 14.4596 8.7701C12.3644 8.7701 12.1139 9.47435 12.1139 10.0025C12.1139 10.6408 12.4099 10.8388 15.234 11.191C18.0352 11.5431 19.3561 12.0493 19.3561 13.9419C19.3333 15.8786 17.6936 16.979 14.8012 16.979Z"/>
@@ -176,9 +208,9 @@
                 </div>
 
                 <div class="stackCard">
-                    <div class="title grow relative">
-                        <p>Vscode</p>
-                    </div>
+                    <p class="title grow relative">
+                        <span>Vscode</span>
+                    </p>
                 
                     <svg viewBox="0 0 24 24">
                         <path d="M0.228341 8.36915C0.228341 8.36915 -0.356212 7.94324 0.345251 7.37453L1.97956 5.89736C1.97956 5.89736 2.44721 5.40004 2.94164 5.83334L18.0231 17.375V22.9094C18.0231 22.9094 18.0158 23.7785 16.9124 23.6825L0.228341 8.36915Z"/>
@@ -190,34 +222,144 @@
             </div>
 
             <input id="experiences_radio" name="tab" type="radio">
-            <label for="experiences_radio" class="p1" tabindex="0">My experiences</label>
+            <label for="experiences_radio" class="mainTab p1" tabindex="0">
+                <span class="fr">Mes expériences</span>
+                <span class="absolute top0 left0 full en">My Experiences</span>
+            </label>
             
-            <div id="experiences_content" class="tabContent">
-                hello experiences !
-            </div>
-        
+            <ul id="experiences_content" class="tabContent">
+                <li class="card_experiences introCard flex">
+                    <article class="content relative">
+                        <div class="swappable fr h100">                
+                            <h2 class="title">Montréal, Poullaouen, Chamonix.</h2>
 
-            
+                            <p class="text">
+                                Mon parcour a été modelé par les voyages et les aventures.  Ski alpin, musique, croisière habitable,cuisine, musique, culture, cinéma ...
+                                Autant d'aventures que d'expériences enrichissantes. 
+                            </p>
+
+                            <p></p>
+                        </div>
+                
+                        <div class="swappable en absolute full top0 left0">
+                            <h2 class="title">Frontend app developer</h2>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="card_experiences flex">
+                    <article class="content relative">
+                        <div class="swappable fr h100">
+                            <h2 class="title">Développeur d'application frontales</h2>
+
+                            <p>Suite à une reconversion en 2021, je travaille comme développeur indépendant.</p>
+
+                            <a href="./projects.html">Voir mes réalisations</a>
+                        </div>
+
+                        <div class="swappable en absolute full top0 left0">
+                            <h2 class="title">Frontend app developer</h2>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="card_experiences flex">
+                    <article class="content relative">
+                        <div class="swappable fr h100">
+                            <h2 class="title fr">Professeur de collège</h2>
+                
+                            <p>Cinq belles années à travailler avec les élèves de la 6ème à la 3ème.  Un métier difficile et exigent qui m'a passionné.</p>
+                
+                            <ul>
+                                <li>Skolaj Diwan Kemper</li>
+                                <li>Collège de l'Aulne</li>
+                                <li>Collège Saint-Antoine</li>
+                                <li>Skolaj Diwan Bro Dreger</li>
+                            </ul>
+                        </div>
+                
+                        <div class="swappable en absolute full top0 left0">
+                            <h2 class="title">College teacher</h2>
+
+                            <p>Cinq belles années à travailler avec les élèves de la 6ème à la  3ème. Un métier difficile et exigent qui m'a
+                                passionné.
+                            </p>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="card_experiences flex">
+                    <article class="content relative">
+                        <div class="swappable fr h100">
+                            <h2 class="title fr">Chef de cuisine / cuisinier</h2>
+                
+                            <p>Cinq belles années à travailler avec les élèves de la 6ème à la 3ème. Un métier difficile et exigent qui
+                                m'a passionné.</p>
+                
+                            <ul>
+                                <li>Skolaj Diwan Kemper</li>
+                                <li>Collège de l'Aulne</li>
+                                <li>Collège Saint-Antoine</li>
+                                <li>Skolaj Diwan Bro Dreger</li>
+                            </ul>
+                        </div>
+                
+                        <div class="swappable en absolute full top0 left0">
+                            <h2 class="title">College teacher</h2>
+                
+                            <p>Cinq belles années à travailler avec les élèves de la 6ème à la 3ème. Un métier difficile et exigent qui
+                                m'a
+                                passionné.
+                            </p>
+                        </div>
+                    </article>
+                </li>
+
+                <li class="card_experiences flex">
+                    <article class="content relative">
+                        <div class="swappable fr h100">
+                            <h2 class="title fr">Violoniste / mandoliniste</h2>
+                
+                            <p >Cinq belles années à travailler avec les élèves de la 6ème à la 3ème. Un métier difficile et exigent qui
+                                m'a passionné.</p>
+                
+                            <ul>
+                                <li>Skolaj Diwan Kemper</li>
+                                <li>Collège de l'Aulne</li>
+                                <li>Collège Saint-Antoine</li>
+                                <li>Skolaj Diwan Bro Dreger</li>
+                            </ul>
+                        </div>
+                
+                        <div class="swappable en absolute full top0 left0">
+                            <h2 class="title">College teacher</h2>
+                
+                            <p>Cinq belles années à travailler avec les élèves de la 6ème à la 3ème. Un métier difficile et exigent qui
+                                m'a
+                                passionné.
+                            </p>
+                        </div>
+                    </article>
+                </li>
+            </ul>
         </div>
-
     </main>
 
-    <nav class="mainNav">
-        <div class=" flex column gap20">
+    <nav class="mainNav about">
+        <div class=" flex column gap20 relative">
             <a class="card" href="../index.html">
-                <span class="flex column justifycenter gap10">
-                    <span class="text">Accueil</span>
+                <span class="flex column justifycenter gap10 relative">
+                    <span class="text fr">Accueil</span>
     
-                    <span class="text">Home</span>
+                    <span class="text en absolute full top0 left0">Home</span>
                 </span>
-    
             </a>
     
             <a class="card" href="./projects.html">
-                <span class="flex column gap10">
-                    <span class="text">Work</span>
+                <span class="flex column gap10 relative">
+                    <span class="text fr">Work</span>
     
-                    <span class="text">Réalisations</span>
+                    <span class="text en absolute full top0 left0">Réalisations</span>
                 </span>
             </a>
         </div>

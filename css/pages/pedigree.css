@@ -1,56 +1,96 @@
-body.pedigree {
-
-    h1 {
-        font-size: max(10vw, 4rem);
-        letter-spacing: -1vw;
-        font-weight: 700;
-        padding-bottom: 3vw;
-
-        .separator {
-            font-weight: 400;
-            margin-inline: 2vw;
-        }
-    }
-
-    div.tabContent {
-        display: flex;
+/* TABS TRANSLATION */
+#language_selector:checked
+    + label
+    + header
+    + main.about div label .fr,
+#language_selector
+    + label
+    + header
+    + main.about div label .en {
         opacity: 0;
-        transition: 300ms ease;
-    }
-    
-    label {
-        height: 48px;
-        margin-inline: 1vw;
-        display: block;
-        cursor: pointer;
-    }
-    input[type="radio"]:checked + label {
-        border-bottom: 10px solid var(--cream);
-    }
-    .tabContent {
-        width: 100%;
-        height: calc(100% - 48px);
-        padding: 30px;
-        position: absolute;
-        top: 48px;
-        left: 0;
-        overflow-x: scroll;
         pointer-events: none;
-    }
+}
 
-    input[type="radio"] {
-        display: none;
-    }
+#language_selector:checked
+    + label
+    + header
+    + main.about div label .en {
+        opacity: 1;
+        pointer-events: all;
+}
+/* TAB SELECTION */
+label.mainTab {
+    height: 48px;
+    padding: 0 20px;
+    display: block;
+    cursor: pointer;
+    position: relative;
+}
 
-    #stack_radio:checked + label + #stack_content, 
-    #experiences_radio:checked+label+#experiences_content{
+label.mainTab::after {
+    width: 0%;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 10px;
+    background-color: var(--cream);
+    transition: width 300ms ease;
+}
+
+input[id="stack_radio"]+label.mainTab::after {
+    right: 0;
+}
+
+input[id="experiences_radio"]+label.mainTab::after {
+    left: 0;
+}
+
+input[type="radio"]:checked+label.mainTab::after {
+    width: 100%;
+    transition: width 300ms ease;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+main.about .tabContent {
+    opacity: 0;
+    pointer-events: none;
+}
+
+#stack_radio:checked
+    + label.mainTab
+    + #stack_content,
+#experiences_radio:checked
+    + label.mainTab
+    + #experiences_content {
         pointer-events: all;
         opacity: 1;
         transition: 300ms ease;
-    }
-   
 }
 
+/* STACK */
+main.about .tabContent {
+    width: 100%;
+    height: calc(100% - 48px);
+    padding: 30px;
+    display: flex;
+    padding-left: 8vw;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    overflow-x: scroll;
+}
+
+@media screen and (hover: none) {
+    main.about div.tabContent {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+}
+
+/* STACK  CARDS */
 .stackCard {
     font-size: 2.6rem;
     background-color: var(--cream);
@@ -61,31 +101,117 @@ body.pedigree {
     flex-direction: column;
     justify-content: flex-end;
     position: relative;
+}
 
-    .title {
-        margin: 15px 0;
-        p {
-            font-size: 50px;
-            font-family: system-ui, sans serif;
-            letter-spacing: -0.05em;
-            color: var(--blue);
-            position: absolute;
-            left: 100%;
-            bottom: 0;
-            transform: rotateZ(-90deg);
-            transform-origin: bottom left;
-        }
-    }
-    svg {
-        width: 75px;
-    }
-    path {
-        fill: var(--blue);
-    }
-    circle.cream {
-        fill: var(--cream);
-    }
-    line.cream {
-        stroke: var(--cream);
-    }
+.stackCard .title {
+    margin: 15px 0;
+}
+.stackCard .title span {
+    font-size: 50px;
+    font-family: system-ui, sans serif;
+    letter-spacing: -0.05em;
+    color: var(--blue);
+    position: absolute;
+    left: 100%;
+    bottom: 0;
+    transform: rotateZ(-90deg);
+    transform-origin: bottom left;
+}
+
+
+svg {
+    width: 75px;
+}
+
+path {
+    fill: var(--blue);
+}
+
+circle.cream {
+    fill: var(--cream);
+}
+
+line.cream {
+    stroke: var(--cream);
+}
+
+/* EXPERIENCES */
+
+#experiences_content  {
+    display: flex;
+    gap: 10px;
+    overflow-y: scroll;
+}
+
+.card_experiences {
+    width: min(500px, 90vw);
+    height: 100%;
+    background-color: var(--cream);
+    flex-shrink: 0;
+}
+.card_experiences p {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: system-ui, sans-serif;
+}
+.card_experiences li {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    font-family: system-ui, sans-serif;
+
+}
+
+article.content .swappable{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+article.content * {
+    color: var(--blue);
+}
+
+article.content .title {
+    font-size: clamp(2.4rem, 2.5vw, 3.2rem);
+    font-family: system-ui, -apple-system, sans-serif;
+    color: var(--blue);
+}
+
+/* EXTPERIENCES CARDS TRANSLATION */
+
+#language_selector:checked
+    + label
+    + header
+    + main.about div #experiences_content li article .fr,
+#language_selector
+    + label
+    + header
+    + main.about div #experiences_content li article .en {
+        opacity: 0;
+        pointer-events: none;
+}
+
+#language_selector
+    + label
+    + header
+    + main.about div #experiences_content li article .fr,
+#language_selector:checked
+    + label
+    + header
+    + main.about div #experiences_content li article .en {
+        opacity: 1;
+        pointer-events: all;
+}
+
+/* INTRO CARD */
+
+.introCard {
+    background-color: transparent;
+    border: 2px solid var(--cream);
+}
+
+.introCard h2.title,
+.introCard p.text {
+    color: var(--cream);
 }
