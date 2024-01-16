@@ -23,32 +23,33 @@ main.projects {
 
 main.projects .frame {
     height: 450px;
-    padding: 0 5px;
+    height: min(500px, 100%);
     display: flex;
     align-items: center;
-    transition: 600ms var(--easing);
 }
 
 main.projects .card {
     width: 250px;
-    height: 80%;
+    height: min(400px, 100%);
     flex-shrink: 0;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    transition: 300ms var(--easing);
+    transition: width 300ms var(--easing), height 300ms var(--easing);
     position: relative;
 }
 
 main.projects .frame:hover .card {
-    height: 100%;
+    height: min(450px, 100%);
     transition: 300ms var(--ease-quick);
 }
 
-main.projects .frame:hover + .frame .card,
-main.projects .frame:focus + .frame .card {
-    height: 90%;
-    transition: 300ms 20ms var(--ease-delay);
+main.projects .frame:hover 
+    + .frame .card,
+main.projects .frame:focus 
+    + .frame .card {
+        height: min(425px, 100%);
+        transition: 300ms 20ms var(--ease-delay);
 }
 
 main.projects .frame:focus .card {
@@ -66,9 +67,13 @@ main.projects .box {
     border-right: 12px solid var(--cream);
     border-bottom: 12px solid var(--cream);
     border-left: 8px solid var(--cream);
-    box-shadow: 
+    box-shadow:
         1px 1px 2px 1px var(--cream),
         1px 1px 3px 1px rgba(0, 0, 0, 0.467);
+    border-radius: 2px;
+}
+.frame:focus .box {
+    border-radius: 2px 0 0 2px;
 }
 
 main.projects img {
@@ -83,32 +88,35 @@ main.projects .projectTitle {
     font-weight: 600;
     letter-spacing: -0.05em;
     font-family: system-ui, sans-serif;
+    background-color: var(--blue);
     padding: 5px;
 }
 
 main.projects .content {
     width: 250px;
     height: 100%;
-    border: 1px solid var(--cream);
+    border: 2px solid var(--cream);
+    border-radius: 3px;
     position: absolute;
     top: 0;
     right: 0;
     z-index: -1;
 }
-
+.frame:focus .content {
+    border-radius: 0 2px 2px 0;
+}
 /* This is the scrollbar track */
+main.projects::-webkit-scrollbar,
+main.projects::-webkit-scrollbar-thumb:hover,
+main.projects::-webkit-scrollbar-thumb {
+    background: #d5d3c268;
+}
+
 main.projects::-webkit-scrollbar {
     width: 10px;
-    background: #5e909c;
 }
 
 /* This is the handle (or "thumb") of the scrollbar */
 main.projects::-webkit-scrollbar-thumb {
-    background: #d5d3c268;
     border-radius: 10px;
-}
-
-/* Change the scrollbar thumb color on hover */
-main.projects::-webkit-scrollbar-thumb:hover {
-    background: #d5d3c286;
 }

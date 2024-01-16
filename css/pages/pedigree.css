@@ -71,6 +71,9 @@ main.about .tabContent {
 }
 
 /* STACK */
+.tabContent {
+    align-items: center;
+}
 main.about .tabContent {
     width: 100%;
     height: calc(100% - 48px);
@@ -92,6 +95,7 @@ main.about .tabContent {
 
 /* STACK  CARDS */
 .stackCard {
+    height: min(450px, 100%);
     font-size: 2.6rem;
     background-color: var(--cream);
     padding: 10px;
@@ -107,8 +111,9 @@ main.about .tabContent {
 }
 
 .stackCard .title {
-    margin: 15px 0;
+    margin: 15px 5px;
 }
+
 .stackCard .title span {
     font-size: 50px;
     font-family: system-ui, sans serif;
@@ -120,6 +125,18 @@ main.about .tabContent {
     transform: rotateZ(-90deg);
     transform-origin: bottom left;
 }
+
+@media screen and (max-height: 700px) {
+    .stackCard .title span {
+        font-size: 30px;
+    }
+}
+@media screen and (orientation: landscape) and (max-height: 600px) {
+    .stackCard .title {
+        display: none;
+    }
+}
+
 
 
 svg {

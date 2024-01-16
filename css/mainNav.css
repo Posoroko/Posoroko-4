@@ -27,12 +27,18 @@
 div.links {
     right: var(--html-padding);
     bottom: 0;
-}
 
-@media (max-width: 768px) {
-    div.links a {
-        height: 32px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+div.links a {
+    font-size: 16px;
+    line-height: 1em;
+    font-family: system-ui, sans-serif;
+    height: 30px;
+    display: flex;
+    align-items: flex-end;
 }
 
 @media screen and (hover:hover) {

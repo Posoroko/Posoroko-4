@@ -5,8 +5,8 @@ input[type=checkbox] {
 }
 .language_selector {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 10px;
+    right: 10px;
 }
 
 .language_selector {
@@ -14,49 +14,52 @@ input[type=checkbox] {
     padding: 0 5px;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     cursor: pointer;
 }
 
 .language_selector span {
     color: var(--cream);
-    font-size: 16px;
+    font-size: 12px;
     font-family: system-ui, sans-serif;
+    line-height: 1em;
+    display: grid;
 }
 
 .language_slider {
-    width: 40px;
+    width: 30px;
     background-color: var(--cream);
-    padding: 3px;
+    padding: 2px;
     border-radius: 50px;
     display: flex;
 }
-
 .language_slider .language_thumb {
     width: 50%;
     aspect-ratio: 1/1;
     border-radius: 50%;
     background-color: var(--blue);
-    transition: background-color 600ms ease;
+    transition: background-color 300ms ease;
 }
 .language_slider .language_thumb:active {
     width: 50%;
     aspect-ratio: 1/1;
     border-radius: 50%;
-    background-color: rgb(187, 232, 253);
-
+    background-color: #4e7c92;
+    transition: background-color 50ms ease;
 }
 
 /* ANIMATION */
 
-#language_selector + .language_selector .language_slider .language_thumb {
+#language_selector 
+    + .language_selector .language_slider .language_thumb {
     /* animation */
-    translate: 0%;
-    transition: 300ms ease;
+        translate: 0%;
+        transition: translate 300ms ease;
 }
 
-#language_selector:checked+.language_selector .language_slider .language_thumb {
+#language_selector:checked
+    +.language_selector .language_slider .language_thumb {
     /* animation */
-    translate: 100%;
-    transition: 300ms ease;
+        translate: 100%;
+        transition: translate 300ms ease;
 }

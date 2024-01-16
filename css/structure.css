@@ -11,10 +11,8 @@ html {
     height: 100svh;
     height: 100dvh;
     font-size: 64.5%;
-    
-
-
-    
+    user-select: none;
+    padding: var(--html-padding);
 }
 
 .mainWidth {
