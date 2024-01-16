@@ -20,7 +20,7 @@
 }
 /* TAB SELECTION */
 label.mainTab {
-    height: 48px;
+    height: 32px;
     font-size: clamp(1.8rem, 2.5vw, 2.8rem);
     font-family: system-ui, sans-serif;
     font-weight: 600;
@@ -30,6 +30,7 @@ label.mainTab {
     position: relative;
 }
 
+
 label.mainTab::after {
     width: 0%;
     content: "";
@@ -38,6 +39,11 @@ label.mainTab::after {
     height: 10px;
     background-color: var(--cream);
     transition: width 300ms ease;
+}
+@media screen and (max-height: 500px) {
+    label.mainTab::after {
+        height: 5px;
+    }
 }
 
 input[id="stack_radio"]+label.mainTab::after {
@@ -80,7 +86,7 @@ main.about .tabContent {
 main.about .tabContent {
     width: 100%;
     height: calc(100% - 48px);
-    padding: 30px;
+    padding:  0 0 15px 0;
     display: flex;
     padding-left: 8vw;
     position: absolute;
@@ -190,15 +196,25 @@ article.content .swappable{
     flex-direction: column;
     justify-content: space-between;
 }
+@media screen and (max-height: 500px) {
+    article.content .swappable {
+        padding: 10px 20px;
+    }
+}
 
 article.content * {
     color: var(--blue);
 }
 
 article.content .title {
-    font-size: clamp(2.4rem, 2.5vw, 3.2rem);
+    font-size: clamp(2.4rem, 2.1vw, 3.2rem);
     font-family: system-ui, -apple-system, sans-serif;
     color: var(--blue);
+}
+@media screen and (max-height: 500px) {
+    article.content .title {
+        font-size: 1.8rem;
+    }
 }
 
 /* EXTPERIENCES CARDS TRANSLATION */

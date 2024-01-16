@@ -19,6 +19,11 @@
     padding-left: 8px;
     transition: 300ms ease-out;
 }
+@media screen and (max-height: 500px) {
+    .mainNav .card .text {
+        font-size: 2rem;
+    }
+}
 
 .mainNav .card svg {
     width: 150px;
@@ -39,6 +44,15 @@ div.links a {
     height: 30px;
     display: flex;
     align-items: flex-end;
+}
+@media screen and (max-height: 500px) {
+    div.links {
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .mainNav .card .text {
+        font-size: 1.6rem;
+    }
 }
 
 @media screen and (hover:hover) {
@@ -104,8 +118,8 @@ div.links a {
 
 /* about */
 
-.mainNav.about {
-    margin-top: 30px;
+.mainNav {
+    margin-top: 15px;
 }
 
 #language_selector:checked 
