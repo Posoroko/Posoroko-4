@@ -42,3 +42,7 @@ body {
     opacity: 1;
     filter: blur(1px);
 }
+
+body:has(input:checked) .background{
+    opacity: 0;
+}

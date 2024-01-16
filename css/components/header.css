@@ -12,8 +12,14 @@ header.index h1 {
 }
 header.work h1 {
     margin-bottom: 2rem;
-
 }
+
+@media screen and (max-height: 500px) {
+    header.work h1 {
+        margin-bottom: 0rem;
+    }
+}
+
 @media screen and (min-height: 900px) {
     header h1 {
         font-size: 9rem;
@@ -82,9 +88,7 @@ header.work h1 {
     }
 
 }
-header.about {
-    margin-bottom: 20px;
-}
+
 /* INDEX */ 
 
 #language_selector:checked
