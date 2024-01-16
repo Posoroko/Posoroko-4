@@ -2,10 +2,85 @@ header {
     width: 100%;
 }
 header h1 {
-    font-size: max(10vw, 4rem);
     font-weight: 700;
-    letter-spacing: -1vw;
-    margin-inline: 2vw;
+    letter-spacing: -0.1em;
+}
+header.index h1 {
+    margin-top: 1rem;
+    margin-right: 100px;
+    line-height: 0.8em;
+}
+header.work h1 {
+    margin-bottom: 2rem;
+
+}
+@media screen and (min-height: 900px) {
+    header h1 {
+        font-size: 9rem;
+        letter-spacing: -0.1em;
+    }
+
+    @media screen and (max-width: 500px) {
+        header h1 {
+            font-size: 6rem;
+            letter-spacing: -0.1em;
+        }
+    }
+
+    @media screen and (max-width: 400px) {
+        header h1 {
+            font-size: 4.5rem;
+            letter-spacing: -0.1em;
+        }
+    }
+
+    @media screen and (max-width: 320px) {
+        header h1 {
+            font-size: 3rem;
+            letter-spacing: -0.1em;
+        }
+    }
+}
+
+@media screen and (max-height: 899px) {
+    header h1 {
+        font-size: 9rem;
+        letter-spacing: -0.1em;
+    }
+    
+    @media screen and (max-width: 500px) {
+        header h1 {
+            font-size: 7rem;
+            letter-spacing: -0.1em;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        header h1 {
+            font-size: 5rem;
+            letter-spacing: -0.1em;
+        }
+    }
+    @media screen and (max-width: 320px) {
+        header h1 {
+            font-size: 4rem;
+            letter-spacing: -0.1em;
+        }
+    }
+    
+}
+@media screen and (max-height: 700px) {
+    header h1 {
+        font-size: 7rem;
+        letter-spacing: -0.1em;
+    }
+
+}
+@media screen and (max-height: 500px) {
+    header h1 {
+        font-size: 5rem;
+        
+    }
+
 }
 header.about {
     margin-bottom: 20px;

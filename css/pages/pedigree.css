@@ -21,6 +21,9 @@
 /* TAB SELECTION */
 label.mainTab {
     height: 48px;
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    font-family: system-ui, sans-serif;
+    font-weight: 600;
     padding: 0 20px;
     display: block;
     cursor: pointer;
