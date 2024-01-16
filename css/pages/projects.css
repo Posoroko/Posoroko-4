@@ -41,6 +41,7 @@ main.projects .card {
 
 main.projects .frame:hover .card {
     height: min(450px, 100%);
+    height: 100%;
     transition: 300ms var(--ease-quick);
 }
 
@@ -75,11 +76,17 @@ main.projects .box {
 .frame:focus .box {
     border-radius: 2px 0 0 2px;
 }
-
-main.projects img {
+.imgFrame {
+    width: 100%;
     flex-grow: 1;
+    position: relative;
+}
+main.projects img {
     width: 100%;
     height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
     object-fit: cover;
 }
 
