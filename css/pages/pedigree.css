@@ -21,17 +21,19 @@
 /* TAB SELECTION */
 label.mainTab {
     height: 32px;
-    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    font-size: clamp(1.8rem, 2.5vw, 2.6rem);
     font-family: system-ui, sans-serif;
     font-weight: 600;
-    padding: 0 10px;
-    display: block;
     cursor: pointer;
     position: relative;
+    display: flex;
+}
+label.mainTab span {
+
+    padding: 0 5vw;
     display: grid;
     place-items: center;
 }
-
 
 label.mainTab::after {
     width: 0%;
@@ -181,11 +183,19 @@ line.cream {
     height: 100%;
     background-color: var(--cream);
     flex-shrink: 0;
+    margin-inline-end: 17px;
 }
 .card_experiences p {
     font-size: 1.6rem;
     line-height: 1.5;
     font-family: system-ui, sans-serif;
+}
+@media screen and (max-height: 500px) {
+    .card_experiences p {
+        font-size: 1.4rem;
+        line-height: 1.2;
+    }
+    
 }
 .card_experiences li {
     font-size: 1.4rem;

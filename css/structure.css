@@ -1,5 +1,6 @@
 :root {
     --blue: #5e909c;
+    /* --blue: #252829; */
     --green: #223622;
     --cream: #d5d3c2;
 
@@ -37,12 +38,11 @@ body {
     z-index: -1;
 
     background-color: var(--blue);
-    /* background-image: url("https://www.transparenttextures.com/patterns/3px-tile.png"); */
     background-image: url("https://www.transparenttextures.com/patterns/worn-dots.png");
-    opacity: 1;
-    filter: blur(1px);
-}
 
-body:has(input:checked) .background{
-    opacity: 0;
+    /* background-image: url("https://www.transparenttextures.com/patterns/basketball.png"); */
+    /* background-size: 1000px; */
+    /* background-repeat: no-repeat; */
+    /* opacity: 0.1; */
+    filter: blur(2px);
 }
