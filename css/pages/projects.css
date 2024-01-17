@@ -1,3 +1,12 @@
+:root {
+    
+    --card-grow-1: 100%;
+    --card-grow-2: 84%;
+    --card-grow-3: 80%;
+    --card-size: 76%;
+
+    --card-animation-1: height 200ms ease-out;
+}
 
 main.projects::-webkit-scrollbar {
     display: none;
@@ -21,42 +30,118 @@ main.projects {
     }
 }
 
-main.projects .frame {
+.projectFrame {
     height: 450px;
     height: min(500px, 100%);
     display: flex;
     align-items: center;
 }
 
-main.projects .card {
-    width: 250px;
-    height: min(400px, 100%);
+.projectFrame .card {
     flex-shrink: 0;
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    transition: width 300ms var(--easing), height 300ms var(--easing);
     position: relative;
 }
-
-main.projects .frame:hover .card {
-    height: min(450px, 100%);
-    height: 100%;
-    transition: 300ms var(--ease-quick);
+/* CARD ANIMATION */
+.projectFrame .card {
+    height: var(--card-size);
+    transform: translate3d(0, 0, 0);
+    transition: var(--card-animation-1);
 }
-
-main.projects .frame:hover 
-    + .frame .card,
-main.projects .frame:focus 
-    + .frame .card {
-        height: min(425px, 100%);
-        transition: 300ms 20ms var(--ease-delay);
+/* MAIN CARD */
+    /* height animation */
+.projectFrame:hover .card,
+.projectFrame:focus .card  {
+    height: var(--card-grow-1);
+    transform: translate3d(0, 0, 0);
 }
-
-main.projects .frame:focus .card {
+.projectFrame img {
+    filter: contrast(1) brightness(1);
+    transition: 300ms ease;
+}
+.projectFrame:hover img,
+.projectFrame:focus img {
+    filter: contrast(1.2) brightness(0.9);
+    transition: 300ms ease;
+}
+    /* width animation */
+.projectFrame .card {
+    width: 250px;
+    transition: 300ms var(--easing);
+}
+.projectFrame:focus .card {
     width: 500px;
-    height: 100%;
-    transition: 300ms var(--ease-delay);
+    transition: 300ms var(--easing);
+}
+/* SECOND CARD */
+.projectFrame:hover 
+    + .projectFrame .card,
+.projectFrame:focus 
+    + .projectFrame .card {
+        height: var(--card-grow-2);
+        transform: translate3d(0, 0, 0);
+}
+/* THIRD CARD */
+.projectFrame:hover
+    + .projectFrame
+    + .projectFrame .card,
+.projectFrame:focus
+    + .projectFrame 
+    + .projectFrame .card {
+        height: var(--card-grow-3);
+        transform: translate3d(0, 0, 0);
+}
+
+main.projects:has( .projectFrame:nth-child(2):hover) .projectFrame:nth-child(1) .card,
+main.projects:has(.projectFrame:nth-child(3):hover) .projectFrame:nth-child(2) .card,
+main.projects:has(.projectFrame:nth-child(4):hover) .projectFrame:nth-child(3) .card,
+main.projects:has(.projectFrame:nth-child(5):hover) .projectFrame:nth-child(4) .card,
+main.projects:has(.projectFrame:nth-child(6):hover) .projectFrame:nth-child(5) .card,
+main.projects:has(.projectFrame:nth-child(7):hover) .projectFrame:nth-child(6) .card,
+main.projects:has(.projectFrame:nth-child(8):hover) .projectFrame:nth-child(7) .card,
+main.projects:has(.projectFrame:nth-child(9):hover) .projectFrame:nth-child(8) .card,
+main.projects:has(.projectFrame:nth-child(10):hover) .projectFrame:nth-child(9) .card {
+    height: var(--card-grow-2);
+    transform: translate3d(0, 0, 0);
+}
+main.projects:has(.projectFrame:nth-child(2):focus) .projectFrame:nth-child(1) .card,
+main.projects:has(.projectFrame:nth-child(3):focus) .projectFrame:nth-child(2) .card,
+main.projects:has(.projectFrame:nth-child(4):focus) .projectFrame:nth-child(3) .card,
+main.projects:has(.projectFrame:nth-child(5):focus) .projectFrame:nth-child(4) .card,
+main.projects:has(.projectFrame:nth-child(6):focus) .projectFrame:nth-child(5) .card,
+main.projects:has(.projectFrame:nth-child(7):focus) .projectFrame:nth-child(6) .card,
+main.projects:has(.projectFrame:nth-child(8):focus) .projectFrame:nth-child(7) .card,
+main.projects:has(.projectFrame:nth-child(9):focus) .projectFrame:nth-child(8) .card,
+main.projects:has(.projectFrame:nth-child(10):focus) .projectFrame:nth-child(9) .card {
+    height: var(--card-grow-2);
+    transform: translate3d(0, 0, 0);
+}
+
+main.projects:has(.projectFrame:nth-child(3):hover) .projectFrame:nth-child(1) .card,
+main.projects:has(.projectFrame:nth-child(4):hover) .projectFrame:nth-child(2) .card,
+main.projects:has(.projectFrame:nth-child(5):hover) .projectFrame:nth-child(3) .card,
+main.projects:has(.projectFrame:nth-child(6):hover) .projectFrame:nth-child(4) .card,
+main.projects:has(.projectFrame:nth-child(7):hover) .projectFrame:nth-child(5) .card,
+main.projects:has(.projectFrame:nth-child(8):hover) .projectFrame:nth-child(6) .card,
+main.projects:has(.projectFrame:nth-child(9):hover) .projectFrame:nth-child(7) .card,
+main.projects:has(.projectFrame:nth-child(10):hover) .projectFrame:nth-child(8) .card,
+main.projects:has(.projectFrame:nth-child(11):hover) .projectFrame:nth-child(9) .card {
+    height: var(--card-grow-3);
+    transform: translate3d(0, 0, 0);
+}
+main.projects:has(.projectFrame:nth-child(3):focus) .projectFrame:nth-child(1) .card,
+main.projects:has(.projectFrame:nth-child(4):focus) .projectFrame:nth-child(2) .card,
+main.projects:has(.projectFrame:nth-child(5):focus) .projectFrame:nth-child(3) .card,
+main.projects:has(.projectFrame:nth-child(6):focus) .projectFrame:nth-child(4) .card,
+main.projects:has(.projectFrame:nth-child(7):focus) .projectFrame:nth-child(5) .card,
+main.projects:has(.projectFrame:nth-child(8):focus) .projectFrame:nth-child(6) .card,
+main.projects:has(.projectFrame:nth-child(9):focus) .projectFrame:nth-child(7) .card,
+main.projects:has(.projectFrame:nth-child(10):focus) .projectFrame:nth-child(8) .card,
+main.projects:has(.projectFrame:nth-child(11):focus) .projectFrame:nth-child(9) .card {
+    height: var(--card-grow-3);
+    transform: translate3d(0, 0, 0);
 }
 
 main.projects .box {
@@ -73,7 +158,7 @@ main.projects .box {
         1px 1px 3px 1px rgba(0, 0, 0, 0.467);
     border-radius: 2px;
 }
-.frame:focus .box {
+.projectFrame:focus .box {
     border-radius: 2px 0 0 2px;
 }
 .imgFrame {
@@ -109,10 +194,10 @@ main.projects .content {
     right: 0;
     z-index: -1;
 }
-.frame:focus .content {
+.projectFrame:focus .content {
     border-radius: 0 2px 2px 0;
 }
-/* This is the scrollbar track */
+/* scrollbar track */
 main.projects::-webkit-scrollbar,
 main.projects::-webkit-scrollbar-thumb:hover,
 main.projects::-webkit-scrollbar-thumb {
@@ -123,7 +208,7 @@ main.projects::-webkit-scrollbar {
     width: 10px;
 }
 
-/* This is the handle (or "thumb") of the scrollbar */
+/* scrollbar thumb */
 main.projects::-webkit-scrollbar-thumb {
     border-radius: 10px;
 }
