@@ -1,4 +1,52 @@
+/* MAIN elements translations */
+#language_selector:checked
+    + label
+    + header
+    + main .translation.fr,
+#language_selector
+    + label
+    + header
+    + main .translation.en {
+        opacity: 0;
+        pointer-events: none;
+        transition: 300ms ease;
+}
 
+#language_selector
+    + label
+    + header
+    + main .translation.fr,
+#language_selector:checked
+    + label
+    + header
+    + main .translation.en {
+        opacity: 1;
+        pointer-events: all;
+        transition: 300ms ease;
+}
+
+/* HEADER elements translations */
+#language_selector:checked
+    + label
+    + header .translation.fr,
+#language_selector
+    + label
+    + header .translation.en {
+        opacity: 0;
+        pointer-events: none;
+        transition: 300ms ease;
+}
+
+#language_selector
+    + label
+    + header .translation.fr,
+#language_selector:checked
+    + label
+    + header .translation.en {
+        opacity: 1;
+        pointer-events: all;
+        transition: 300ms ease;
+}
 
 input[type=checkbox] {
     display: none;

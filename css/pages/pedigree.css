@@ -1,84 +1,79 @@
-/* TABS TRANSLATION */
-#language_selector:checked
-    + label
-    + header
-    + main.about div label .fr,
-#language_selector
-    + label
-    + header
-    + main.about div label .en {
-        opacity: 0;
-        pointer-events: none;
+main.about > div.container {
+    margin-top: 2vh;
+    display: flex;
+    align-items: flex-start;
 }
-
-#language_selector:checked
-    + label
-    + header
-    + main.about div label .en {
-        opacity: 1;
-        pointer-events: all;
+main.about {
+    --mainTab-height: clamp(30px, 6vh, 40px)
 }
 /* TAB SELECTION */
 label.mainTab {
-    height: 32px;
+    --underline-height: 5px;
+
+    width: min(300px, 45vw);
+    height: var(--mainTab-height);
     font-size: clamp(1.8rem, 2.5vw, 2.6rem);
     font-family: system-ui, sans-serif;
     font-weight: 600;
     cursor: pointer;
     position: relative;
-    display: flex;
-}
-label.mainTab span {
 
-    padding: 0 5vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+/* might become a global set of rules */
+.mainTab .translation.en {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - var(--underline-height));
+    top: 0;
+    left: 0;
+}
+.mainTab .translation.en {
     display: grid;
     place-items: center;
 }
-
-label.mainTab::after {
-    width: 0%;
-    content: "";
-    position: absolute;
-    top: 100%;
-    height: 10px;
+.mainTab .box {
+    flex-grow: 1;
+    display: grid;
+    place-items: center;
+}
+.tabUnderline {
+    height: var(--underline-height);
     background-color: var(--cream);
-    margin-top: 5px;
-    transition: width 300ms ease;
-    
 }
-@media screen and (max-height: 500px) {
-    label.mainTab::after {
-        height: 5px;
-    }
+.stack.tabUnderline {
+    align-self: flex-end;
 }
-
-input[id="stack_radio"]+label.mainTab::after {
-    right: 0;
+.experience.tabUnderline {
+    align-self: flex-start;
 }
-
-input[id="experiences_radio"]+label.mainTab::after {
-    left: 0;
-}
-
-input[type="radio"]:checked+label.mainTab::after {
-    width: 100%;
-    transition: width 300ms ease;
-}
-
 input[type="radio"] {
     display: none;
 }
-
+input[type="radio"]
+    + .mainTab .tabUnderline {
+        width: 0%;
+        transition: width 300ms ease;
+        pointer-events: none;
+}
+input[type="radio"]:checked
+    + .mainTab .tabUnderline {
+        width: 100%;
+        transition: width 300ms ease;
+        pointer-events: all;
+}
 main.about .tabContent {
     opacity: 0;
     pointer-events: none;
 }
 
 #stack_radio:checked
-    + label.mainTab
+    + label
     + #stack_content,
 #experiences_radio:checked
-    + label.mainTab
+    + label
     + #experiences_content {
         pointer-events: all;
         opacity: 1;
@@ -88,15 +83,16 @@ main.about .tabContent {
 /* STACK */
 .tabContent {
     align-items: center;
+    overflow-y: hidden;
 }
 main.about .tabContent {
     width: 100%;
-    height: calc(100% - 48px);
+    height: calc(100% - var(--mainTab-height));
     padding:  10px 0 15px 0;
     display: flex;
     padding-left: 8vw;
     position: absolute;
-    top: 48px;
+    top: var(--mainTab-height);
     left: 0;
     overflow-x: scroll;
 }
@@ -152,8 +148,6 @@ main.about .tabContent {
     }
 }
 
-
-
 svg {
     width: 75px;
 }
@@ -175,13 +169,25 @@ line.cream {
 #experiences_content  {
     margin-top: 10px;
     display: flex;
+    align-items: center;
+}
+#experiences_content .scrollContainer {
+    height: min(450px, 100%);
+    display: flex;
     gap: 10px;
+    padding-bottom: 40px;
+    overflow-y: hidden;
     overflow-x: scroll;
+}
+@media screen and (hover: none) {
+    #experiences_content {
+        padding-bottom: 10px;
+    }
 }
 
 .card_experiences {
     width: min(500px, 100%);
-    height: 100%;
+    
     background-color: var(--cream);
     flex-shrink: 0;
     margin-inline-end: 17px;
@@ -197,9 +203,11 @@ line.cream {
     }
 }
 
-
-.card_experiences p {
-    font-size: 1.6rem;
+.card_experiences p,
+.card_experiences .otherText,
+.workLink {
+    font-size: 1.8rem;
+    font-weight: 600;
     line-height: 1.5;
     font-family: system-ui, sans-serif;
 }
@@ -208,7 +216,6 @@ line.cream {
         font-size: 1.4rem;
         line-height: 1.2;
     }
-    
 }
 .card_experiences li {
     font-size: 1.4rem;
@@ -216,14 +223,14 @@ line.cream {
     font-family: system-ui, sans-serif;
 }
 
-article.content .swappable{
-    padding: 20px;
+article.content .translation{
+    padding: 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 @media screen and (max-height: 500px) {
-    article.content .swappable {
+    article.content .translation {
         padding: 10px 20px;
     }
 }
@@ -243,32 +250,6 @@ article.content .title {
     }
 }
 
-/* EXTPERIENCES CARDS TRANSLATION */
-
-#language_selector:checked
-    + label
-    + header
-    + main.about div #experiences_content li article .fr,
-#language_selector
-    + label
-    + header
-    + main.about div #experiences_content li article .en {
-        opacity: 0;
-        pointer-events: none;
-}
-
-#language_selector
-    + label
-    + header
-    + main.about div #experiences_content li article .fr,
-#language_selector:checked
-    + label
-    + header
-    + main.about div #experiences_content li article .en {
-        opacity: 1;
-        pointer-events: all;
-}
-
 /* INTRO CARD */
 
 .introCard {
@@ -280,4 +261,17 @@ article.content .title {
 .introCard h2.title,
 .introCard p.text {
     color: var(--cream);
+}
+article.content .workLink {
+    color: var(--cream);
+    background-color: var(--blue);
+    padding: 5px 8px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.479);
+    transition: box-shadow 300ms ease;
+    align-self: flex-start;
+}
+article.content .workLink:hover {
+    box-shadow: 1px 1px 2px 1px rgba(0, 40, 63, 0.712);
+    transition: box-shadow 300ms ease;
 }
