@@ -1,24 +1,6 @@
 @import "../main.css";
 @import "../components.css";
 
-
-
-
-label[for="number"] {
-    font-size : 30px;
-}
-input[type="number"] {
-    width: 400px;
-    font-size: 40px;
-    background-color: #494949;
-}
-
-
-
-
-
-
-
 body.index .boxA {
     width: 10vw;
     background-color: var(--cream);
