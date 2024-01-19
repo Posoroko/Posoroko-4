@@ -1,0 +1,177 @@
+@import "../main.css";
+@import "../components.css";
+
+main.work {
+    --card-grow-1: 100%;
+    --card-grow-2: 84%;
+    --card-grow-3: 80%;
+    --card-size: 76%;
+
+    --card-animation-1: height 200ms ease-out;
+
+    --easing: cubic-bezier(.63, 0, .34, 1);
+    --ease-quick: cubic-bezier(.74, -0.01, .5, 1);
+    --ease-delay: cubic-bezier(.84, -0.01, .31, .99);
+    overflow-x: scroll;
+    /* overflow-y: visible; */
+    padding-left: 8vw;
+    padding-bottom: 20px;
+    max-height: 520px;
+}
+
+main.work::-webkit-scrollbar {
+    display: none;
+    /* For Chrome, Safari and Opera */
+}
+
+
+@media screen and (hover: none) {
+    main.work {
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+}
+
+.projectFrame {
+    height: 450px;
+    height: min(500px, 100%);
+    display: flex;
+    align-items: center;
+}
+
+.projectFrame .card {
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+/* CARD ANIMATION */
+
+.projectFrame .card {
+    height: var(--card-size);
+    transform: translate3d(0, 0, 0);
+    transition: var(--card-animation-1);
+}
+
+/* width animation */
+.projectFrame .card {
+    width: 250px;
+    transition: 300ms var(--easing);
+}
+.projectFrame:focus .card {
+    width: 500px;
+    transition: 300ms var(--easing);
+}
+/* height animation */
+
+/* MAIN CARD */
+
+/* THis can't be degugged. If it bugs, you probably have to rewrite it... :-) */
+
+/* main hover */
+
+
+
+
+main.work:not(:focus-within) .pFrame:has(+ .pFrame + .pFrame:hover) .card {
+    height: var(--card-grow-3);
+}
+main.work:not(:focus-within) .pFrame:has(+ .pFrame:hover) .card {
+    height: var(--card-grow-2);
+}
+main.work:not(:focus-within) .pFrame:hover .card {
+    height: var(--card-grow-1) !important;
+}
+main.work:not(:focus-within) .pFrame:hover + .pFrame .card {
+    height: var(--card-grow-2);
+}
+main.work:not(:focus-within) .pFrame:hover+.pFrame +.pFrame .card {
+    height: var(--card-grow-3);
+}
+
+.pFrame:has( +.pFrame + .pFrame:focus) .card {
+    height: var(--card-grow-3);
+}
+.pFrame:has( + .pFrame:focus) .card {
+    height: var(--card-grow-2);
+}
+.pFrame:focus .card {
+    height: var(--card-grow-1);
+}
+.pFrame:focus+.pFrame .card {
+    height: var(--card-grow-2);
+}
+.pFrame:focus +.pFrame +.pFrame .card {
+    height: var(--card-grow-3);
+}
+
+
+
+main.projects .box {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    border-top: 8px solid var(--cream);
+    border-right: 12px solid var(--cream);
+    border-bottom: 12px solid var(--cream);
+    border-left: 8px solid var(--cream);
+    box-shadow:
+        1px 1px 2px 1px var(--cream),
+        1px 1px 3px 1px rgba(0, 0, 0, 0.467);
+    border-radius: 2px;
+}
+.projectFrame:focus .box {
+    border-radius: 2px 0 0 2px;
+}
+.imgFrame {
+    width: 100%;
+    flex-grow: 1;
+    position: relative;
+}
+main.projects img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+}
+
+main.projects .projectTitle {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: -0.05em;
+    background-color: var(--blue);
+    padding: 5px;
+}
+
+main.projects .content {
+    width: 250px;
+    height: 100%;
+    border: 2px solid var(--cream);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+}
+.projectFrame:focus .content {
+    border-radius: 0 2px 2px 0;
+}
+/* scrollbar track */
+main.projects::-webkit-scrollbar,
+main.projects::-webkit-scrollbar-thumb:hover,
+main.projects::-webkit-scrollbar-thumb {
+    background: #d5d3c268;
+}
+
+main.projects::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* scrollbar thumb */
+main.projects::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+}

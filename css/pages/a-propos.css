@@ -1,3 +1,6 @@
+@import "../main.css";
+@import "../components.css";
+
 main.about > div.container {
     margin-top: 2vh;
     display: flex;
@@ -13,7 +16,6 @@ label.mainTab {
     width: min(300px, 45vw);
     height: var(--mainTab-height);
     font-size: clamp(1.8rem, 2.5vw, 2.6rem);
-    font-family: system-ui, sans-serif;
     font-weight: 600;
     cursor: pointer;
     position: relative;
@@ -127,7 +129,6 @@ main.about .tabContent {
 
 .stackCard .title span {
     font-size: 50px;
-    font-family: system-ui, sans serif;
     letter-spacing: -0.05em;
     color: var(--blue);
     position: absolute;
@@ -202,14 +203,26 @@ line.cream {
         scroll-snap-align: center;
     }
 }
+article.content .workLink {
+    color: var(--cream);
+    background-color: var(--blue);
+    padding: 0.3em 0.9em;
+    border-radius: 1px;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.479);
+    transition: box-shadow 300ms ease;
+    align-self: flex-start;
+}
 
+article.content .workLink:hover {
+    box-shadow: 1px 1px 2px 1px rgba(0, 40, 63, 0.712);
+    transition: box-shadow 300ms ease;
+}
 .card_experiences p,
 .card_experiences .otherText,
 .workLink {
     font-size: 1.8rem;
     font-weight: 600;
     line-height: 1.5;
-    font-family: system-ui, sans-serif;
 }
 @media screen and (max-height: 500px) {
     .card_experiences p {
@@ -220,7 +233,6 @@ line.cream {
 .card_experiences li {
     font-size: 1.4rem;
     line-height: 1.3;
-    font-family: system-ui, sans-serif;
 }
 
 article.content .translation{
@@ -241,7 +253,6 @@ article.content * {
 
 article.content .title {
     font-size: clamp(2.4rem, 2.1vw, 3.2rem);
-    font-family: system-ui, -apple-system, sans-serif;
     color: var(--blue);
 }
 @media screen and (max-height: 500px) {
@@ -261,17 +272,4 @@ article.content .title {
 .introCard h2.title,
 .introCard p.text {
     color: var(--cream);
-}
-article.content .workLink {
-    color: var(--cream);
-    background-color: var(--blue);
-    padding: 5px 8px;
-    border-radius: 3px;
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.479);
-    transition: box-shadow 300ms ease;
-    align-self: flex-start;
-}
-article.content .workLink:hover {
-    box-shadow: 1px 1px 2px 1px rgba(0, 40, 63, 0.712);
-    transition: box-shadow 300ms ease;
 }
