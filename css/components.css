@@ -103,6 +103,17 @@ LANGUAGE SELECTOR
 
 */
 
+/* 
+All .translation.en are aboslute positioned and hidden by default
+Their parent must be relative positioned
+*/
+.translation.en {
+    position: absolute;
+    inset: 0;
+}
+
+
+
 /* MAIN elements translations */
 head:has(+ body #language_selector) .fr {
     display: block;
