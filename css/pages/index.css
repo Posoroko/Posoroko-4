@@ -47,3 +47,40 @@ body.index ul.technos li {
 path {
     fill: var(--cream);
 }
+
+.indexMainContent {
+    width: 50%;
+    margin: 3vw;
+}
+@media (max-width: 768px) {
+    .indexMainContent {
+        width: 100%;
+        margin: 6vw 3vw;
+    }
+}
+
+
+.indexMainContent > .box {
+    height: 100%;
+    padding: 1.5vw;
+    overflow-y: scroll;
+}
+.indexMainContent h2 {
+    font-size: clamp(1.8rem, 2vw, 2.4rem);
+}
+.indexMainContent .card {
+    background-color: var(--cream);
+    padding: 20px;
+    margin-block: 10px;
+}
+.indexMainContent .card * {
+    color: var(--blue);
+}
+.indexMainContent .card .title {
+    font-size: clamp(1.6rem, 2vw, 2rem);
+    font-weight: 700;
+}
+.indexMainContent .card .description {
+    font-size: 1.6rem;
+    line-height: 1.3;
+}

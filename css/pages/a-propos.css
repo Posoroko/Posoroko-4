@@ -90,9 +90,9 @@ main.about .tabContent {
 main.about .tabContent {
     width: 100%;
     height: calc(100% - var(--mainTab-height));
-    padding:  10px 0 15px 0;
+    padding:  30px 0 30px 0;
     display: flex;
-    padding-left: 8vw;
+    /* padding-left: 5vw; */
     position: absolute;
     top: var(--mainTab-height);
     left: 0;
@@ -113,10 +113,6 @@ main.about .tabContent {
     background-color: var(--cream);
     padding: 10px;
     margin-inline: 5px;
-    box-shadow: 
-        1px 0px 1px 1px var(--cream),
-        1px 1px 3px 1px rgba(0, 0, 0, 0.411);
-
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -236,12 +232,12 @@ article.content .workLink:hover {
 }
 
 article.content .translation{
-    padding: 40px;
+    padding: 4vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
-@media screen and (max-height: 500px) {
+@media screen and (max-height: 750px) {
     article.content .translation {
         padding: 10px 20px;
     }
