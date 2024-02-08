@@ -204,7 +204,7 @@ article.content .workLink {
     background-color: var(--blue);
     padding: 0.3em 0.9em;
     border-radius: 1px;
-    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.479);
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.329);
     transition: box-shadow 300ms ease;
     align-self: flex-start;
 }
@@ -235,7 +235,7 @@ article.content .translation{
     padding: 4vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 @media screen and (max-height: 750px) {
     article.content .translation {
