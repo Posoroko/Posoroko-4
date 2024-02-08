@@ -96,7 +96,39 @@ header.work h1 {
 
 }
 
+/* 
 
+SCROLL INFO
+
+*/
+
+.scrollInfo {
+    font-size: 1.6rem;
+    line-height: 0;
+    font-weight: 500;
+    margin-inline: 10px;
+    opacity: 0;
+    transition: 150ms ease;
+}
+@media screen and (hover: hover) {
+    main:hover .scrollInfo {
+        opacity: 1;
+    }
+}
+
+#scrollInfo div.flex.column {
+    background-color: var(--blue);
+    padding: 7px 5px;
+    border-radius: 3px;
+    border: 1px solid var(--cream);
+}
+.scrollInfo .east {
+    width: 20px;
+    fill: var(--cream);
+}
+.scrollInfo .east:nth-of-type(2) {
+    rotate: 180deg;
+}
 /* 
 
 LANGUAGE SELECTOR
