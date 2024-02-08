@@ -187,6 +187,9 @@ main.projects .content .description {
     display: flex;
     align-items: center;
 }
+.content .link * {
+    pointer-events: none;
+}
 
 .content .link .translation {    
     flex-grow: 1;
